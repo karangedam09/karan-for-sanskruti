@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You, Sanskruti ❤️</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      text-align: center;
+      padding: 50px;
+      color: #fff;
+    }
+    .box {
+      background: rgba(255,255,255,0.2);
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #yes {
+      background-color: #e91e63;
+      color: white;
+    }
+    #no {
+      background-color: #f06292;
+      color: white;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Dear Sanskruti 💖</h1>
+    <p>Will you be mine forever? - Karan 💌</p>
+    <button id="yes">Yes, forever 💍</button>
+    <button id="no">No (Just kidding 😜)</button>
+    <p id="response"></p>
+  </div>
+
+  <script>
+    document.getElementById("yes").onclick = function() {
+      document.getElementById("response").innerText = "I knew it, my love! ❤️ - Karan";
+    };
+    document.getElementById("no").onclick = function() {
+      document.getElementById("response").innerText = "Aww, naughty Sanskruti! 😘";
+    };
+  </script>
+</body>
+</html>
