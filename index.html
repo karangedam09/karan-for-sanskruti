@@ -6,12 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>For You, Sanskruti ❤️</title>
   <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
     body {
       font-family: 'Arial', sans-serif;
       background: linear-gradient(135deg, #ff758c, #ff7eb3);
       text-align: center;
       padding: 50px;
       color: #fff;
+      animation: fadeIn 2s ease-in;
     }
     .box {
       background: rgba(255,255,255,0.2);
@@ -50,6 +55,10 @@
   </style>
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="bgmusic.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="box">
     <h1>Dear Sanskruti 💖</h1>
     <p>Will you be mine forever? - Karan 💌</p>
@@ -60,7 +69,7 @@
 
   <script>
     document.getElementById("yes").onclick = function() {
-      document.getElementById("response").innerText = "I knew it, my love! ❤️ - Karan";
+      window.location.href = "love.html";
     };
     document.getElementById("no").onclick = function() {
       document.getElementById("response").innerText = "Aww, naughty Sanskruti! 😘";
