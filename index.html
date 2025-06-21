@@ -4,76 +4,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For You, Sanskruti ❤️</title>
+  <title>Karan ❤️ Sanskruti</title>
   <style>
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
     body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
       text-align: center;
       padding: 50px;
-      color: #fff;
       animation: fadeIn 2s ease-in;
     }
-    .box {
-      background: rgba(255,255,255,0.2);
-      padding: 20px;
-      border-radius: 20px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
     h1 {
-      font-size: 36px;
-    }
-    p {
-      font-size: 20px;
+      font-size: 2.5em;
+      color: #e6005c;
     }
     button {
-      padding: 10px 20px;
-      margin: 10px;
+      padding: 15px 30px;
       font-size: 18px;
+      background-color: #ff4081;
+      color: white;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       cursor: pointer;
-      transition: 0.3s;
-    }
-    #yes {
-      background-color: #e91e63;
-      color: white;
-    }
-    #no {
-      background-color: #f06292;
-      color: white;
+      transition: transform 0.3s ease;
     }
     button:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="bgmusic.mp3" type="audio/mpeg">
+  <audio id="bg-music" loop>
+    <source src="bgmusic.mp3" type="audio/mpeg" />
   </audio>
 
-  <div class="box">
-    <h1>Dear Sanskruti 💖</h1>
-    <p>Will you be mine forever? - Karan 💌</p>
-    <button id="yes">Yes, forever 💍</button>
-    <button id="no">No (Just kidding 😜)</button>
-    <p id="response"></p>
-  </div>
+  <h1>Hi Sanskruti, This is for You ❤️</h1>
+  <p>Click the button to begin the journey...</p>
+  <button onclick="startExperience()">Start</button>
 
   <script>
-    document.getElementById("yes").onclick = function() {
+    function startExperience() {
+      const music = document.getElementById("bg-music");
+      music.play();
       window.location.href = "love.html";
-    };
-    document.getElementById("no").onclick = function() {
-      document.getElementById("response").innerText = "Aww, naughty Sanskruti! 😘";
-    };
+    }
   </script>
 </body>
 </html>
